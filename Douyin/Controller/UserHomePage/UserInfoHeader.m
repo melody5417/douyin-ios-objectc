@@ -357,7 +357,8 @@ static const NSTimeInterval kAnimationDefaultDuration = 0.25;
     if(_isFollowed) {
         [_focusButton setHidden:NO];
     }
-    
+
+    // NOTE: 开始动画时一定要禁止交互
     _focusButton.userInteractionEnabled = NO;
     _focusIcon.userInteractionEnabled = NO;
     if(_isFollowed) {

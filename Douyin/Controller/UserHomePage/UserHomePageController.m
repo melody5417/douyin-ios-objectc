@@ -29,7 +29,7 @@
 NSString * const kUserInfoCell         = @"UserInfoCell";
 NSString * const kAwemeCollectionCell  = @"AwemeCollectionCell";
 
-@interface UserHomePageController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIViewControllerTransitioningDelegate,UIScrollViewDelegate,OnTabTapActionDelegate,UserInfoDelegate>
+@interface UserHomePageController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIViewControllerTransitioningDelegate, UIScrollViewDelegate, OnTabTapActionDelegate, UserInfoDelegate>
 
 @property (nonatomic, copy) NSString                           *uid;
 @property (nonatomic, strong) User                             *user;

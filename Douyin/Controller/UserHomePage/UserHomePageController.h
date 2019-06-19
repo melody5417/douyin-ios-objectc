@@ -6,6 +6,8 @@
 //  Copyright © 2018年 Qiao Shi. All rights reserved.
 //
 
+// https://sshiqiao.github.io/document/douyin-objectc.html
+
 #import "BaseViewController.h"
 
 @interface UserHomePageController : BaseViewController
