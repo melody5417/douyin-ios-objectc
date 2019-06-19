@@ -25,6 +25,7 @@
 
 #define kUserInfoHeaderHeight          350 + SafeAreaTopHeight
 #define kSlideTabBarHeight             40
+#define kUserInfoBackgroundMaxHeight   300
 
 NSString * const kUserInfoCell         = @"UserInfoCell";
 NSString * const kAwemeCollectionCell  = @"AwemeCollectionCell";
@@ -224,6 +225,10 @@ NSString * const kAwemeCollectionCell  = @"AwemeCollectionCell";
 //UIScrollViewDelegate Delegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat offsetY = scrollView.contentOffset.y;
+    if (offsetY < -kUserInfoBackgroundMaxHeight) {
+        scrollView.contentOffset = CGPointMake(scrollView.contentOffset.x, -kUserInfoBackgroundMaxHeight);
+        offsetY = scrollView.contentOffset.y;
+    }
     if (offsetY < 0) {
         [_userInfoHeader overScrollAction:offsetY];
     }else {
